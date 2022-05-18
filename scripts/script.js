@@ -8,3 +8,14 @@ document.getElementById('select-location').addEventListener('change',function(e)
   let coords = e.target.value.split(",");
   map.flyTo(coords,13);
 })
+
+var options = {
+    maxZoom: 16,
+    tolerance: 3,
+    debug: 0,
+    style: {
+      fillColor: "red",
+      color: "red",
+    },
+  };
+  var vtLayer = L.geoJson.vt(data, options).addTo(map);
